@@ -17,22 +17,27 @@ function App() {
   return (
     // application
       <div className="App">
+        
         <Router> 
           <Header/>
-          <Routes>
-              <Route 
-                element={<Home/>}
-                path="/" 
-              />
-              <Route 
-                element={<MovieDetail/>}
-                path='/movie/:imdbID' 
-              />
-              <Route 
-                element={<PageNotFound/>}
-                path="*"
-              />
-          </Routes>
+          
+          <div className='container'>
+            <Routes>
+                <Route 
+                  element={<Home/>}
+                  path="/" 
+                />
+                <Route 
+                  element={<MovieDetail/>}
+                  path='/movie/:imdbID' 
+                />
+                <Route 
+                  element={<PageNotFound/>}
+                  path="*"
+                />
+            </Routes>
+          </div>
+          
           <Footer/>
         </Router>
       </div>
