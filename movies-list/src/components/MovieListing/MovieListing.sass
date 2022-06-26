@@ -1,13 +1,15 @@
 @import '../../common/colors';
 
-.movie-list
+.movie-list, .show-list
     margin: 20px 0px
     h2
         color: $font-secondary
-        margin-bottom: 10px
+        margin-bottom: 30px
         font-weight: 400
+        // @media screen and (max-width: 768px)
+        //     margin-bottom: 30px
 
 .movie-container
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr))
-    gap: 15px // La propriété gap est une propriété raccourcie pour row-gap et column-gap qui permet de définir les espaces (les gouttières) entre les lignes et entre les colonnes d'une grille.
+    gap: 20px // La propriété gap est une propriété raccourcie pour row-gap et column-gap qui permet de définir les espaces (les gouttières) entre les lignes et entre les colonnes d'une grille.

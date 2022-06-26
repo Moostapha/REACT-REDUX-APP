@@ -10,8 +10,30 @@
 a
     text-decoration: none
 
+// height 100% screen 
+html, body
+    height: 100%
+    @media screen and (max-width: 768px)   // en dessous de format tablette
+        display: flex
+        flex-direction: column
+        height: auto
+        margin: 2px
+
+.App
+    height: inherit  // inherit from html and body 100% of their heights
+
+// #root, .App, .container
+//     height: inherit
+
 body
     background: $primary-color
 
 .container
     margin: 0px 40px
+    padding-top: 10px
+    @media screen and (min-width: 768px) //smartphone
+        margin: 0px
+        padding-top: 20px
+    @media screen and (max-width: 768px)  // tablet
+        margin: 3px
+        padding-top: 20px
