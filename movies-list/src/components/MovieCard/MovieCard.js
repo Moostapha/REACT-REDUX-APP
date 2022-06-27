@@ -13,7 +13,7 @@ const MovieCard = (props) => {
     console.log(`DATA MOVIE RECEIVED FROM API`,  data)
     return (
         <div className='card-item'>
-
+            
             <Link to={ `/movie/${data.imdbID}` }>
                 <div className='card-inner'>
                     <div className='card-top'>

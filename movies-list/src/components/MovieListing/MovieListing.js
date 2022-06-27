@@ -1,5 +1,10 @@
 import React from 'react';
 
+// carousel via react-slick
+import Slider from 'react-slick';
+// Settings for Slider carousel => 
+import { Settings } from '../../common/carouselSettings';
+
 // useSelector to fetch and display movies in this component
 import { useSelector } from 'react-redux';
 import { getAllMovies } from '../../features/movies/movieSlice';
@@ -7,7 +12,6 @@ import { getAllShows } from '../../features/movies/movieSlice';
 
 // style de MovieListing
 import './MovieListing.sass'
-
 
 // component MovieCard injection data movies search
 import MovieCard from '../MovieCard/MovieCard'
@@ -59,18 +63,34 @@ const MovieListing = () => {
     
     return (
         <div className='movie-wrapper'>
-            <div className='movie-list'>
-                <h2>Movies</h2>
-                <div className='movie-container'>
-                    {renderMovies}
+            {/* condition for page upload with fragment */}
+            {Object.keys(movies).length === 0 && Object.keys(shows).length === 0 ? 
+                (<div className='loading'> 
+                    <h2>Loading...</h2>
+                </div>)
+                :(
+                <>
+                <div className='movie-list'>
+                    <h2>Films</h2>
+                    <div className='movie-container'>
+                        {/* Add of carousel Slider with spread Settings */}
+                        <Slider {...Settings}>
+                            {renderMovies}
+                        </Slider>
+                    </div>
                 </div>
-            </div>
-            <div className='show-list'>
-                <h2>Shows</h2>
-                <div className='movie-container'>
-                    {renderShows}
+                <div className='show-list'>
+                    <h2>Séries</h2>
+                    <div className='movie-container'>
+                        {/* Add of carousel Slider with spread Settings */}
+                        <Slider {...Settings}>
+                            {renderShows}
+                        </Slider>
+                    </div>
                 </div>
-            </div>
+                </>
+                )
+            }
         </div>
     )
     

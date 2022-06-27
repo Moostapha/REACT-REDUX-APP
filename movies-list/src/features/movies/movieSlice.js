@@ -16,14 +16,14 @@ const initialState = {
 export const fetchAsyncMovies = createAsyncThunk(
     
     'movies/fetchAsyncMovies',
-    async () => {
+    async (searched) => {
         
         // Test film recherché sur API
-        const movieSearched = 'Batman';
+        // const movieSearched = 'Batman';
         
         // axios async request to API
         const response = await movieApi
-        .get(`?apiKey=${apiKey}&s=${movieSearched}&type=movie`)
+        .get(`?apiKey=${apiKey}&s=${searched}&type=movie`)
         
         return (response.data);
     }
@@ -33,14 +33,14 @@ export const fetchAsyncMovies = createAsyncThunk(
 export const fetchAsyncShows= createAsyncThunk(
     
     'movies/fetchAsyncShows',
-    async () => {
+    async (searched) => {
         
         // Test series recherché sur API
-        const seriesSearched = 'Dragon Ball Z';
+        // const seriesSearched = 'Dragon Ball Z';
         
         // axios async request to API
         const response = await movieApi
-        .get(`?apiKey=${apiKey}&s=${seriesSearched}&type=series`)
+        .get(`?apiKey=${apiKey}&s=${searched}&type=series`)
         
         return (response.data);
     }
