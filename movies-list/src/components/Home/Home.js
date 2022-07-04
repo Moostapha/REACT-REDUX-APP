@@ -26,11 +26,11 @@ const Home = () => {
     );
     
     return (
-        <div>
+        // <div>
             <div className='banner-img'>
                 <MovieListing/>
             </div>
-        </div>
+        // </div>
     );
 };
 

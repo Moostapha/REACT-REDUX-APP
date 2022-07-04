@@ -20,16 +20,17 @@ html, body
         height: auto
         margin: 2px
 
-.App
-    height: 100%  // inherit from html and body 100% of their heights
+// .App
+//     height: inherit  // inherit from html and body 100% of their heights
 
-#root, .App
-    height: inherit
+.App, .container
+    height: 100%
 
 body
     background: $primary-color
 
 .container
+    // height: inherit // test pour mettre full height partout
     margin: 0px 40px
     padding-top: 10px
     @media screen and (min-width: 768px) //smartphone
