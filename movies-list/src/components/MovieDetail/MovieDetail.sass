@@ -1,18 +1,17 @@
 @import '../../common/colors';
 
-.container
-    height: 84vh
-    @media screen and (max-width: 768px)
-        height: 125vh
-
 .movie-section
     display: flex
     justify-content: space-evenly
     pdding: 40px 0px
     color: $font-primary
     font-weight: 400
+    height: 95vh
     @media screen and (max-width: 768px)
         flex-direction: column-reverse
+        height: 135vh
+    @media screen and (max-width: 320px)
+        height: 170vh
 
 .movie-rating
     padding-left: 3px
